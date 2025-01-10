@@ -10,20 +10,21 @@ const Navbar = () => {
     { title: "Home", path: "/" },
     { title: "About", path: "/about" },
     { title: "Services", path: "/services" },
-    { title: "Contact", path: "/contact" },
+    { title: "Calculator", path: "/calculator" },
+    { title: "Contacts", path: "/contacts" },
   ];
 
   const handleSidebarClose = () => setIsSidebarOpen(false);
 
   return (
-    <>
+    <div>
       {/* Navbar */}
       <nav className="bg-primary shadow-md fixed w-full top-0 left-0">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-page mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Website Name */}
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold text-white">Website Name</h1>
+              <h1 className="text-lg max-sm:text-md font-semibold text-white">Prarambh Capital Services</h1>
             </div>
 
             {/* Desktop Navigation Links */}
@@ -34,8 +35,8 @@ const Navbar = () => {
                   to={link.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "md:text-gray-100 text-accent"
-                      : "text-gray-100 hover:text-gray-300 transition-colors"
+                      ? "md:bg-white md:px-1 md:rounded-md text-accent"
+                      : "text-gray-100 hover:text-gray-300 transition-colors px-1"
                   }
                 >
                   {link.title}
@@ -132,7 +133,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 
