@@ -21,10 +21,12 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="bg-primary shadow-md fixed w-full top-0 left-0">
         <div className="max-w-page mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-16 max-sm:h-14">
             {/* Website Name */}
             <div className="flex-shrink-0">
-              <h1 className="text-lg max-sm:text-md font-semibold text-white">Prarambh Capital Services</h1>
+              <h1 className="text-lg max-sm:text-md font-semibold text-white">
+                Prarambh Capital Services
+              </h1>
             </div>
 
             {/* Desktop Navigation Links */}
@@ -36,7 +38,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "md:bg-white md:px-1 md:rounded-md text-accent"
-                      : "text-gray-100 hover:text-gray-300 transition-colors px-1"
+                      : "text-gray-100 hover:text-gray-300 md:rounded-md transition-colors px-1"
                   }
                 >
                   {link.title}
@@ -48,7 +50,7 @@ const Navbar = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="text-gray-100 hover:text-gray-300 focus:outline-none"
+                className="text-gray-100 flex items-center hover:text-gray-300 focus:outline-none"
               >
                 <svg
                   className="h-6 w-6"

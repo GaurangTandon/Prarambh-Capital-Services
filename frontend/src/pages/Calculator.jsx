@@ -2,7 +2,7 @@ import React from 'react'
 
 const Calculator = () => {
   return (
-    <div>Calculator</div>
+    <div className='min-h-[100vh]'>Calculator</div>
   )
 }
 
