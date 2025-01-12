@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import {
   FaChartLine,
   FaHandshake,
@@ -25,34 +24,34 @@ const Home = () => {
     <div className="min-h-screen text-white">
       <div className="sm:container mx-auto">
         {/* Hero Section */}
-        <motion.section
+        <section
           className="h-screen flex items-center justify-center text-center px-4 text-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
           <div className="max-w-4xl">
-            <motion.h1
+            <h1
               className="sm:text-5xl text-lg font-bold mb-6"
               {...fadeIn}
             >
               Make confident choices about your money, now.
-            </motion.h1>
-            <motion.button
+            </h1>
+            <button
               className="bg-white text-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Start Your Journey
-            </motion.button>
+            </button>
           </div>
-        </motion.section>
+        </section>
 
         {/* About Section */}
         <section className="py-5 sm:px-4">
           <div className="container flex-col justify-center">
             <div className="grid md:grid-cols-2 gap-8 items-start mb-16">
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -100,9 +99,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -152,15 +151,15 @@ const Home = () => {
                 </div>
 
                 <div className="text-center mt-8">
-                  <motion.button
+                  <button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors"
                   >
                     Read More
-                  </motion.button>
+                  </button>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -182,7 +181,7 @@ const Home = () => {
                 { icon: FaLock, text: "Confidentiality" },
                 { icon: FaUserTie, text: "Diligence" },
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={index}
                   className="text-center p-6 max-sm:px-2 bg-white rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
@@ -192,7 +191,7 @@ const Home = () => {
                 >
                   <item.icon className="text-3xl text-blue-600 mx-auto" />
                   <p className="font-semibold text-gray-600 max-sm:text-sm">{item.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -200,7 +199,7 @@ const Home = () => {
 
         {/* Quote Section */}
         <section className="mx-auto max-sm:mx-4 my-10 flex-col justify-center items-center py-10 px-4 bg-black bg-opacity-20 rounded-lg mb-5">
-          <motion.div
+          <div
             className="max-w-4xl mx-auto text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -211,17 +210,17 @@ const Home = () => {
               it. If you think about that, you'll do things differently"
             </blockquote>
             <p className="mt-2 mb-5 text-gray-300">- Warren Buffet</p>
-          </motion.div>
+          </div>
           <div className="max-w-6xl mx-auto text-center">
             <p>Your journey to financial freedom starts here</p>
             <div className="mt-4">
-              <motion.button
+              <button
                 className="bg-white text-primary px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Us
-              </motion.button>
+              </button>
             </div>
           </div>
         </section>
