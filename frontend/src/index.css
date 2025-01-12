@@ -3,17 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
+body > div {
   position: absolute;
-  top: 0.5px;
   left: 0;
   right: 0;
+  top: 0.5px;
   bottom: 0.5px;
-  overflow-x: hidden; /* or any other value */
-  overflow-y: auto; /* or any other value */
-}
-
-body > div {
-  scroll-behavior:smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
 }
