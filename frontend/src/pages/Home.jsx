@@ -23,7 +23,7 @@ const Home = () => {
   
   return (
     <div className="min-h-screen text-white">
-      <div className="container mx-auto">
+      <div className="sm:container mx-auto">
         {/* Hero Section */}
         <motion.section
           className="h-screen flex items-center justify-center text-center px-4 text-white"
@@ -32,7 +32,10 @@ const Home = () => {
           transition={{ duration: 1 }}
         >
           <div className="max-w-4xl">
-            <motion.h1 className="text-5xl font-bold mb-6" {...fadeIn}>
+            <motion.h1
+              className="sm:text-5xl text-lg font-bold mb-6"
+              {...fadeIn}
+            >
               Make confident choices about your money, now.
             </motion.h1>
             <motion.button
@@ -46,7 +49,7 @@ const Home = () => {
         </motion.section>
 
         {/* About Section */}
-        <section className="py-5 px-4">
+        <section className="py-5 sm:px-4">
           <div className="container flex-col justify-center">
             <div className="grid md:grid-cols-2 gap-8 items-start mb-16">
               <motion.div
@@ -105,18 +108,18 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="text-gray-300"
               >
-                <div className="text-left">
+                <div className=" text-center sm:text-left">
                   <h3 className="text-red-600 font-semibold text-2xl">
                     ABOUT US
                   </h3>
-                  <h2 className="text-lg font-bold text-gray-200">
-                    Welcome to VSRK Capital Pvt. Ltd.
+                  <h2 className="text-xl max-sm:text-lg font-bold text-white">
+                    Welcome to Prarambh capital Services
                   </h2>
-                  <h3 className="text-lg text-gray-300 mb-2">
-                    Best Mutual Fund Distributor in Delhi NCR, India
-                  </h3>
+                  <h3 className="text-xl max-sm:text-lg text-white mb-2"></h3>
                 </div>
-                <p className="mb-8 text-lg text-justify max-sm:text-md leading-relaxed">
+                <p className="mb-8 text-lg text-justify leading-1 text-gray-300">
+                  Best Mutual Fund Distributor in Delhi NCR, India
+                  <br></br>
                   VSRK Capital Private Limited was incorporated on 8th November
                   2013 with the name of VSRK Wealth Creator Pvt. Ltd. has been
                   performing its rituals of enhancing the wealth of its huge
@@ -181,14 +184,14 @@ const Home = () => {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="text-center p-6 bg-white rounded-lg shadow-lg"
+                  className="text-center p-6 max-sm:px-2 bg-white rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <item.icon className="text-3xl text-blue-600 mx-auto" />
-                  <p className="font-semibold text-gray-600">{item.text}</p>
+                  <p className="font-semibold text-gray-600 max-sm:text-sm">{item.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -196,7 +199,7 @@ const Home = () => {
         </section>
 
         {/* Quote Section */}
-        <section className="mx-auto my-10 flex-col justify-center items-center py-10 px-4 bg-black bg-opacity-20 rounded-lg mb-5">
+        <section className="mx-auto max-sm:mx-4 my-10 flex-col justify-center items-center py-10 px-4 bg-black bg-opacity-20 rounded-lg mb-5">
           <motion.div
             className="max-w-4xl mx-auto text-center"
             initial={{ opacity: 0 }}
