@@ -6,9 +6,12 @@ import IconBar from '../components/IconBar/IconBar'
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop'
 const Layout = () => {
   const { pathname } = useLocation();
+
   const scrollUp = () => {
-    const scrollableElement = document.documentElement || document.body;
-    scrollableElement.scrollTop = 0;
+    const scrollableElement = document.querySelector("body > div");
+    if (scrollableElement) {
+      scrollableElement.scrollTop = 0;
+    }
   };
   useEffect(scrollUp, [pathname]);
   return (

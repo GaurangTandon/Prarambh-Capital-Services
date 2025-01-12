@@ -4,14 +4,16 @@ import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 const ScrollToTop = () => {
   const scrollUp = () => {
-    const scrollableElement = document.documentElement || document.body;
-    scrollableElement.scrollTop = 0;
+    const scrollableElement = document.querySelector("body > div");
+    if (scrollableElement) {
+      scrollableElement.scrollTop = 0;
+    }
   };
   return (
     <div>
       <motion.div
-        initial={{ x: 50 }}
-        animate={{ x: 0 }}
+        initial={{ y: 50 }}
+        animate={{ y: 0 }}
         transition={{ duration: 0.3}}
         onClick={scrollUp}
         className="fixed bottom-2 right-5 w-10 h-10 flex justify-center items-center rounded-2xl text-white text-xl bg-primary shadow-[0_1px_2px_1px_rgba(0,0,0,0.6)] cursor-pointer"
