@@ -31,10 +31,7 @@ const Home = () => {
           transition={{ duration: 1 }}
         >
           <div className="max-w-4xl">
-            <h1
-              className="sm:text-5xl text-lg font-bold mb-6"
-              {...fadeIn}
-            >
+            <h1 className="sm:text-5xl text-lg font-bold mb-6" {...fadeIn}>
               Make confident choices about your money, now.
             </h1>
             <button
@@ -119,12 +116,10 @@ const Home = () => {
                 <p className="mb-8 text-lg text-justify leading-1 text-gray-300">
                   Best Mutual Fund Distributor in Delhi NCR, India
                   <br></br>
-                  VSRK Capital Private Limited was incorporated on 8th November
-                  2013 with the name of VSRK Wealth Creator Pvt. Ltd. has been
-                  performing its rituals of enhancing the wealth of its huge
-                  client base with its expert personnel and knowledge of both
-                  traditional and modern Financial Products under Investment
-                  guidance Services to ensure a smooth and amazing satisfaction.
+                  We are your dedicated financial advocates, committed to
+                  transforming your financial future. We are here to make
+                  financial security a reality for everyone, empowering you to
+                  take control of your money.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -190,7 +185,9 @@ const Home = () => {
                   transition={{ delay: index * 0.1 }}
                 >
                   <item.icon className="text-3xl text-blue-600 mx-auto" />
-                  <p className="font-semibold text-gray-600 max-sm:text-sm">{item.text}</p>
+                  <p className="font-semibold text-gray-600 max-sm:text-sm">
+                    {item.text}
+                  </p>
                 </div>
               ))}
             </div>
