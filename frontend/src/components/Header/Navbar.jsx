@@ -20,7 +20,7 @@ const Navbar = () => {
       {/* Navbar */}
       <nav
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="bg-primary shadow-[0_1px_2px_1px_rgba(0,0,0,0.6)] fixed w-full top-0 left-0"
+        className="bg-primary shadow-[0_1px_2px_1px_rgba(0,0,0,0.6)] fixed w-full top-0 left-0 z-10"
       >
         <div className="max-w-page mx-auto px-4">
           <div className="flex justify-between items-center h-16 max-sm:h-14">
@@ -39,7 +39,7 @@ const Navbar = () => {
                   to={link.path}
                   className={({ isActive }) =>
                     isActive
-                      ? "md:bg-white md:px-1 md:rounded-md text-accent"
+                      ? "md:bg-white md:px-1 md:rounded-md text-primary"
                       : "text-gray-100 hover:text-gray-300 md:rounded-md transition-colors px-1"
                   }
                 >
@@ -126,8 +126,8 @@ const Navbar = () => {
                   onClick={handleSidebarClose}
                   className={({ isActive }) =>
                     isActive
-                      ? "block px-4 py-2 text-accent bg-gray-100 text-center"
-                      : "block px-4 py-2 text-gray-100 hover:bg-gray-300 hover:text-accent transition-colors text-center"
+                      ? "block px-4 py-2 text-primary bg-gray-100 text-center"
+                      : "block px-4 py-2 text-gray-100 hover:bg-gray-300 hover:text-primary transition-colors text-center"
                   }
                 >
                   {link.title}

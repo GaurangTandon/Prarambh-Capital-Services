@@ -8,8 +8,18 @@ import Calculator from '@/pages/Calculator'
 import Contacts from '@/pages/Contacts'
 import NotFound from '@/pages/NotFound'
 const App = () => {
+  const backgroundStyle = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),url('/bg.jpg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+  };
   return (
-    <div className="font-primary">
+    <div 
+      className="font-primary"
+      style={backgroundStyle}
+    >
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
