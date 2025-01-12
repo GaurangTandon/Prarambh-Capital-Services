@@ -4,10 +4,8 @@ import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 const ScrollToTop = () => {
   const scrollUp = () => {
-    const scrollableElement = document.querySelector("body > div");
-    if (scrollableElement) {
-      scrollableElement.scrollTop = 0;
-    }
+    const scrollableElement = document.documentElement || document.body;
+    scrollableElement.scrollTop = 0;
   };
   return (
     <div>
