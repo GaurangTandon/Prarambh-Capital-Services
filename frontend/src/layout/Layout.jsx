@@ -15,7 +15,7 @@ const Layout = () => {
     <div>
       <Navbar />
       <IconBar/>
-      <div className='mt-14 sm:mt-16'>
+      <div className='mt-12 sm:mt-14'>
         <Outlet />
       </div>
       <ScrollToTop/>
