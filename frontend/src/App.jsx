@@ -6,6 +6,7 @@ import About from '@/pages/About'
 import Services from '@/pages/Services'
 import Calculator from '@/pages/Calculator'
 import Contacts from '@/pages/Contacts'
+import NotFound from '@/pages/NotFound'
 const App = () => {
   return (
     <div className="font-primary">
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/services" element={<Services/>}></Route>
             <Route path="/calculator" element={<Calculator/>}></Route>
             <Route path="/contacts" element={<Contacts/>}></Route>
+            <Route path="*" element={<Home/>}></Route>
           </Route>
         </Routes>
       </Router>

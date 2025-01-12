@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
@@ -19,7 +18,10 @@ const Navbar = () => {
   return (
     <div>
       {/* Navbar */}
-      <nav className="bg-primary shadow-md fixed w-full top-0 left-0">
+      <nav
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        className="bg-primary shadow-[0_1px_2px_1px_rgba(0,0,0,0.6)] fixed w-full top-0 left-0"
+      >
         <div className="max-w-page mx-auto px-4">
           <div className="flex justify-between items-center h-16 max-sm:h-14">
             {/* Website Name */}
@@ -49,7 +51,7 @@ const Navbar = () => {
             {/* Hamburger Menu Button */}
             <div className="md:hidden">
               <button
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                // onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                 className="text-gray-100 flex items-center hover:text-gray-300 focus:outline-none"
               >
                 <svg
@@ -124,8 +126,8 @@ const Navbar = () => {
                   onClick={handleSidebarClose}
                   className={({ isActive }) =>
                     isActive
-                      ? "block px-4 py-2 text-accent bg-gray-100"
-                      : "block px-4 py-2 text-gray-100 hover:bg-gray-300 hover:text-accent transition-colors"
+                      ? "block px-4 py-2 text-accent bg-gray-100 text-center"
+                      : "block px-4 py-2 text-gray-100 hover:bg-gray-300 hover:text-accent transition-colors text-center"
                   }
                 >
                   {link.title}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,141 +8,113 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Footer = () => {
+import { address, contact, importantLinks } from "./constants";
+import IconBarFooter from "../IconBar/IconBarFooter";
+export default function Footer() {
   return (
-    <footer className="w-full bg-primary text-white py-8 px-4">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Contact Form Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: false }}
-            className="flex flex-col items-center"
-          >
-            <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-            <form className="w-full max-w-md space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-2 rounded bg-gray-600 border-2 border-white text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-2 rounded bg-gray-600 border-2 border-white text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                />
-              </div>
-              <div>
-                <textarea
-                  placeholder="Message"
-                  rows="4"
-                  className="w-full px-4 py-2 rounded bg-gray-600 border-2 border-white text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                ></textarea>
-              </div>
-              <button className="w-full bg-yellow-500 text-gray-900 py-2 rounded hover:bg-yellow-600 transition-colors">
-                Submit
-              </button>
-            </form>
-          </motion.div>
-
-          {/* Important Links Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: false }}
-            className="flex flex-col items-center"
-          >
-            <h2 className="text-xl font-bold mb-4">Important Links</h2>
-            <nav className="flex flex-col items-center space-y-2">
-              <Link to="/" className="hover:text-yellow-500 transition-colors">
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="hover:text-yellow-500 transition-colors"
-              >
-                About Us
-              </Link>
-              <Link
-                to="/services"
-                className="hover:text-yellow-500 transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                to="/contact"
-                className="hover:text-yellow-500 transition-colors"
-              >
-                Contact
-              </Link>
-            </nav>
-          </motion.div>
-
-          {/* Address & Contact Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: false }}
-            className="flex flex-col items-center"
-          >
-            <h2 className="text-xl font-bold mb-4">Address & Contact</h2>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <FontAwesomeIcon
-                  icon={faMapMarkerAlt}
-                  className="text-sm bg-gray-600 border-2 border-white rounded-full p-2"
-                />
-                <p className="ml-4 text-sm">
-                  123 Main Street
-                  <br />
-                  City, State 12345
-                </p>
-              </div>
-              <div className="flex items-center">
-                <FontAwesomeIcon
-                  icon={faPhoneAlt}
-                  className="text-sm bg-gray-600 border-2 border-white rounded-full p-2"
-                />
-                <p className="ml-4 text-sm">(555) 123-4567</p>
-              </div>
-              <div className="flex items-center">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  className="text-sm bg-gray-600 border-2 border-white rounded-full p-2"
-                />
-                <a
-                  href="mailto:example@email.com"
-                  className="ml-4 text-sm text-yellow-500 hover:text-yellow-600"
-                >
-                  example@email.com
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Copyright Section */}
+    <footer className="w-full flex-col justify-center items-center bg-gray-800 text-white p-10">
+      <div className="max-w-[1200px] w-full flex max-[900px]:flex-col flex-wrap justify-evenly items-center gap-8 mx-auto">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.1 }}
           viewport={{ once: false }}
-          className="text-center mt-8 pt-4 border-t border-gray-600"
         >
-          <p className="text-sm text-gray-300">
-            © {new Date().getFullYear()} Your Company. All rights reserved.
-          </p>
+          <img className="w-[150px] max-md:w-[125px]" src="/logo.png" alt="logo" />
+          {/* <div className="flex flex-wrap gap-2 text-sm xl:text-md">
+            <NavLink className="border-r-2 border-white pr-2" to="/">
+              मुख्य पृष्ठ
+            </NavLink>
+            <NavLink className="border-r-2 border-white pr-2" to="/guests">
+              अतिथि
+            </NavLink>
+            <NavLink className="border-r-2 border-white pr-2" to="/team">
+              सदस्य
+            </NavLink>
+            <NavLink to="/gallery">वीथिका</NavLink>
+          </div> */}
+          {/* <p className="footer-company-name text-sm text-center text-yellow-500">
+            Tooryanaad © 2024
+          </p> */}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          viewport={{ once: false }}
+        >
+          <div className="mb-2 flex items-center">
+            <FontAwesomeIcon
+              icon={faMapMarkerAlt}
+              className="text-sm bg-gray-900 rounded-full p-2"
+            />
+            <p className="inline text-sm ml-4">
+              <span>{address.street}</span>
+              <br />
+              {address.city}, {address.state}, {address.zip}
+            </p>
+          </div>
+
+          <div className="mb-2 flex items-center">
+            <FontAwesomeIcon
+              icon={faPhoneAlt}
+              className="text-sm bg-gray-900 rounded-full p-2"
+            />
+            <p className="inline text-sm ml-4">{contact.phone}</p>
+          </div>
+
+          <div className="mb-4 flex items-center">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="text-sm bg-gray-900 rounded-full p-2"
+            />
+            <p className="inline text-sm ml-4">
+              <a href={`mailto:${contact.email}`} className="text-yellow-500">
+                {contact.email}
+              </a>
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: false }}
+        >
+          <IconBarFooter/>
         </motion.div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: false }}
+        className="w-[90%] max-sm:w-full mx-auto my-2 border border-white"
+      ></motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false }}
+        className="max-w-[1200px] text-sm w-full flex gap-2 max-md:flex-col justify-between items-center mx-auto"
+      >
+        <div className="text-center">
+          Copyright © 2025 All Rights Reserved.
+        </div>
+        <div className="flex flex-wrap justify-center">
+          {importantLinks.map((ele, index) => (
+            <a
+              key={index}
+              href={`${ele.url}`}
+              className="text-sm text-gray-300 hover:text-white px-1 border-r-2 border-white"
+            >
+              {ele.name}
+            </a>
+          ))}
+        </div>
+      </motion.div>
     </footer>
   );
-};
-
-export default Footer;
+}
