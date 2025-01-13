@@ -20,7 +20,7 @@ const Contacts = () => {
 
   const handleCaptchaChange = (value) => {
     // console.log("Captcha value:", value);
-    setCaptchaVerified(!!value); // Mark as verified if value exists
+    setCaptchaVerified(!!value);
   };
 
   const handleSubmit = (e) => {
@@ -65,7 +65,7 @@ const Contacts = () => {
                   onChange={handleChange}
                   required
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
-                  placeholder="John Doe"
+                  placeholder="Full Name"
                 />
               </div>
 
@@ -84,7 +84,7 @@ const Contacts = () => {
                   onChange={handleChange}
                   required
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
-                  placeholder="john@example.com"
+                  placeholder="ex@example.com"
                 />
               </div>
 

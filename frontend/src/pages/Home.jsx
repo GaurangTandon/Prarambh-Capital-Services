@@ -12,6 +12,8 @@ import {
   FaChartPie,
 } from "react-icons/fa";
 
+import { NavLink } from "react-router-dom";
+
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -34,13 +36,14 @@ const Home = () => {
             <h1 className="sm:text-5xl text-lg font-bold mb-6" {...fadeIn}>
               Make confident choices about your money, now.
             </h1>
-            <button
+            <NavLink
+              to="/contacts"
               className="bg-white text-primary px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-100 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Start Your Journey
-            </button>
+            </NavLink>
           </div>
         </section>
 
@@ -146,13 +149,14 @@ const Home = () => {
                 </div>
 
                 <div className="text-center mt-8">
-                  <button
+                  <NavLink
+                    to="/about"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition-colors"
                   >
                     Read More
-                  </button>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -211,13 +215,14 @@ const Home = () => {
           <div className="max-w-6xl mx-auto text-center">
             <p>Your journey to financial freedom starts here</p>
             <div className="mt-4">
-              <button
+              <NavLink
+                to="/contacts"
                 className="bg-white text-primary px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Us
-              </button>
+              </NavLink>
             </div>
           </div>
         </section>

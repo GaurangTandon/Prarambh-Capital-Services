@@ -10,7 +10,7 @@ const Navbar = () => {
     { title: "About", path: "/about" },
     { title: "Services", path: "/services" },
     { title: "Calculator", path: "/calculator" },
-    { title: "Contacts", path: "/contacts" },
+    { title: "Contact", path: "/contacts" },
   ];
 
   const handleSidebarClose = () => setIsSidebarOpen(false);
