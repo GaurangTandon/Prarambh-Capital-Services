@@ -30,7 +30,7 @@ const IconBar = () => {
             />
           </a>
           <a
-            href={`${socialLinks.facebook}`}
+            href={`${socialLinks.instagram}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,7 +40,7 @@ const IconBar = () => {
             />
           </a>
           <a
-            href={`${socialLinks.facebook}`}
+            href={`${socialLinks.twitter}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -50,7 +50,7 @@ const IconBar = () => {
             />
           </a>
           <a
-            href={`${socialLinks.facebook}`}
+            href={`${socialLinks.youtube}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +60,7 @@ const IconBar = () => {
             />
           </a>
           <a
-            href={`${socialLinks.facebook}`}
+            href={`${socialLinks.linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
           >
