@@ -139,7 +139,7 @@ const Home = () => {
                     <p className="text-justify">
                       Our vision is simple yet powerful, to ensure financial
                       freedom for all. We believe that everyone deserves a
-                      chance to thrive. Financial security shouldn’t be a
+                      chance to thrive. Financial security shouldn't be a
                       privilege; it should be a right.
                     </p>
                   </div>
