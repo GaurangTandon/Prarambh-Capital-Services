@@ -12,10 +12,10 @@ const Calculator = () => {
     calculators[0].component;
 
   return (
-    <div className="min-h-screen flex-col justify-center items-center mb-10">
+    <div className="min-h-screen flex-col justify-center items-center mb-10 pt-10">
       <div className=" text-white pt-6 px-4 text-center">
-        <h1 className="text-3xl font-bold">Smart Money Calculator Suite</h1>
-        <p className="text-blue-100 mt-2">
+        <h1 className="text-3xl max-sm:text-xl font-bold">Smart Money Calculator Suite</h1>
+        <p className="text-blue-100 max-sm:text-sm mt-2">
           Your Financial Future, Calculated with Precision
         </p>
       </div>
@@ -23,9 +23,6 @@ const Calculator = () => {
       <div className="flex justify-center items-start mt-5">
         {/* Mobile View */}
         <div className="md:hidden p-4 w-full flex flex-col items-center">
-          <h1 className="text-gray-400 font-semibold mb-5 sm:text-xl text-lg">
-            Choose the financial calculator
-          </h1>
           <select
             value={selectedCalculator}
             onChange={(e) => setSelectedCalculator(e.target.value)}
@@ -43,7 +40,7 @@ const Calculator = () => {
         </div>
 
         {/* Desktop View */}
-        <div className="hidden container md:flex">
+        <div className="hidden container md:flex md:justify-center">
           {/* Sidebar */}
           <div className="flex-2 p-4 mt-10">
             <h2 className="text-xl font-bold mb-4 text-white">
@@ -68,7 +65,7 @@ const Calculator = () => {
           </div>
 
           {/* Main Content */}
-          <div key={selectedCalculator} className="flex-1 p-8">
+          <div key={selectedCalculator} className="flex-1 p-8 xl:max-w-[60%]">
             <div className="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
               <h2 className="text-2xl font-bold mb-6">
                 {
