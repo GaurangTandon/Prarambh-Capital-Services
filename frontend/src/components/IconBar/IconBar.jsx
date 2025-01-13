@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { socialLinks } from "./constants";
 const IconBar = () => {
   return (
-    <div className="max-sm:hidden fixed top-1/2 -translate-y-1/2 z-10 ">
+    <div className="max-lg:hidden fixed top-1/2 -translate-y-1/2 z-10 ">
       <motion.div
         initial={{ x: -50 }}
         animate={{ x: 0 }}
