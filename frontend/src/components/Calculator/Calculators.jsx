@@ -124,6 +124,7 @@ const calculators = [
               finalBalance: (0),
               totalWithdrawn: (totalWithdrawn+balance).toFixed(2),
               status: "SWP ended early as balance was exhausted.",
+              ok:false,
             });
             return;
           }
@@ -135,6 +136,7 @@ const calculators = [
           finalBalance: balance.toFixed(2),
           totalWithdrawn: totalWithdrawn.toFixed(2),
           status: "SWP completed successfully with remaining balance.",
+          ok:true,
         });
       };
 
@@ -204,11 +206,7 @@ const calculators = [
               <p className="text-md font-semibold">
                 Status:{" "}
                 <span
-                  className={
-                    result.status === "Sustainable"
-                      ? "text-green-600"
-                      : "text-red-600"
-                  }
+                  className={ result.ok ? "text-green-600" : "text-red-600" }
                 >
                   {result.status}
                 </span>
