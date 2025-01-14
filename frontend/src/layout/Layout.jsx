@@ -4,15 +4,9 @@ import { Outlet, useLocation } from "react-router-dom";
 import Footer from '@/components/Footer/Footer'
 import IconBar from '../components/IconBar/IconBar'
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop'
+import { scrollUp } from '../components/ScrollToTop/ScrollToTop';
 const Layout = () => {
   const { pathname } = useLocation();
-
-  const scrollUp = () => {
-    const scrollableElement = document.querySelector("body > div");
-    if (scrollableElement) {
-      scrollableElement.scrollTop = 0;
-    }
-  };
   useEffect(scrollUp, [pathname]);
   return (
     <div>

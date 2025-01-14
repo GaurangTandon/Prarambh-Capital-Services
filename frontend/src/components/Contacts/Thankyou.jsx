@@ -1,10 +1,8 @@
-// Install necessary packages before using:
-// npm install react framer-motion tailwindcss
-
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { scrollUp } from "../ScrollToTop/ScrollToTop";
 const ThankYou = () => {
+  useEffect(()=>{scrollUp()});
   return (
     <div className="flex flex-col justify-start h-screen bg-gradient-to-b from-blue-500 to-green-500 text-white">
       {/* Animated Header */}

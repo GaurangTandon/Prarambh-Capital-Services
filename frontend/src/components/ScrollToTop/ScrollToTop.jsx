@@ -2,13 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+const scrollUp = () => {
+  const scrollableElement = document.querySelector("body > div");
+  if (scrollableElement) {
+    scrollableElement.scrollTop = 0;
+  }
+};
 const ScrollToTop = () => {
-  const scrollUp = () => {
-    const scrollableElement = document.querySelector("body > div");
-    if (scrollableElement) {
-      scrollableElement.scrollTop = 0;
-    }
-  };
   return (
     <div>
       <motion.div
@@ -25,3 +25,4 @@ const ScrollToTop = () => {
 };
 
 export default ScrollToTop;
+export {scrollUp};
