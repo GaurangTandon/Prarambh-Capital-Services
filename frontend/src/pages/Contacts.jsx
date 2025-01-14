@@ -6,6 +6,7 @@ const Contacts = () => {
     name: "",
     email: "",
     message: "",
+    phoneNumber: ""
   });
   const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -31,7 +32,7 @@ const Contacts = () => {
     }
     // console.log("Form submitted:", formData);
     setSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", message: "", phoneNumber: "" });
     setCaptchaVerified(false);
     setTimeout(() => setSubmitted(false), 3000);
   };
@@ -85,6 +86,25 @@ const Contacts = () => {
                   required
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
                   placeholder="ex@example.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="phoneNumber"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="number"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  required
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
+                  placeholder="XXXXXXXXXX"
                 />
               </div>
 
