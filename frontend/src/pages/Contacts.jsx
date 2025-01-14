@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import ThankYou from "@/components/Contacts/Thankyou"
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    phoneNumber: ""
+    phoneNumber: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
@@ -20,7 +21,6 @@ const Contacts = () => {
   };
 
   const handleCaptchaChange = (value) => {
-    // console.log("Captcha value:", value);
     setCaptchaVerified(!!value);
   };
 
@@ -30,12 +30,15 @@ const Contacts = () => {
       alert("Please verify the CAPTCHA.");
       return;
     }
-    // console.log("Form submitted:", formData);
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "", phoneNumber: "" });
     setCaptchaVerified(false);
-    setTimeout(() => setSubmitted(false), 3000);
+    setTimeout(()=>{setSubmitted(false)},5000);
   };
+
+  if (submitted) {
+    return <ThankYou />;
+  }
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
@@ -148,14 +151,6 @@ const Contacts = () => {
                 </button>
               </div>
             </form>
-
-            {submitted && (
-              <div className="mt-4 p-4 bg-green-100 rounded-md">
-                <p className="text-sm text-green-700">
-                  Thank you for your message! We'll be in touch soon.
-                </p>
-              </div>
-            )}
           </div>
         </div>
       </div>

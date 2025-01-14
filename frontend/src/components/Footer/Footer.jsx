@@ -20,7 +20,11 @@ export default function Footer() {
           transition={{ duration: 0.1 }}
           viewport={{ once: false }}
         >
-          <img className="w-[150px] max-md:w-[125px]" src="/logo.png" alt="logo" />
+          <img
+            className="w-[150px] max-md:w-[125px]"
+            src="/logo.png"
+            alt="logo"
+          />
           {/* <div className="flex flex-wrap gap-2 text-sm xl:text-md">
             <NavLink className="border-r-2 border-white pr-2" to="/">
               मुख्य पृष्ठ
@@ -83,7 +87,7 @@ export default function Footer() {
           transition={{ duration: 0.3 }}
           viewport={{ once: false }}
         >
-          <IconBarFooter/>
+          <IconBarFooter />
         </motion.div>
       </div>
       <motion.div
@@ -100,13 +104,12 @@ export default function Footer() {
         viewport={{ once: false }}
         className="max-w-[1200px] text-sm w-full flex gap-2 max-md:flex-col justify-between items-center mx-auto"
       >
-        <div className="text-center">
-          Copyright © 2025 All Rights Reserved.
-        </div>
+        <div className="text-center">Copyright © 2025 All Rights Reserved.</div>
         <div className="flex flex-wrap justify-center">
           {importantLinks.map((ele, index) => (
             <a
               key={index}
+              target="_blank"
               href={`${ele.url}`}
               className="text-sm text-gray-300 hover:text-white px-1 border-r-2 border-white"
             >
