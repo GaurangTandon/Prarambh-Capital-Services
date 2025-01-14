@@ -119,6 +119,14 @@ const calculators = [
         let totalWithdrawn = 0;
 
         for (let i = 0; i < months; i++) {
+          if (balance < withdrawal) {
+            setResult({
+              finalBalance: (0),
+              totalWithdrawn: (totalWithdrawn+balance).toFixed(2),
+              status: "SWP ended early as balance was exhausted.",
+            });
+            return;
+          }
           balance = balance * (1 + monthlyRate) - withdrawal;
           totalWithdrawn += withdrawal;
         }
@@ -126,9 +134,10 @@ const calculators = [
         setResult({
           finalBalance: balance.toFixed(2),
           totalWithdrawn: totalWithdrawn.toFixed(2),
-          status: balance > 0 ? "Sustainable" : "Not Sustainable",
+          status: "SWP completed successfully with remaining balance.",
         });
       };
+
 
       return (
         <div className="space-y-4">
