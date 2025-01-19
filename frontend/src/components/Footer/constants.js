@@ -20,10 +20,6 @@ const importantLinks = [
     url: "not-defined",
   },
   {
-    name: "Privacy Policy",
-    url: "not-defined",
-  },
-  {
     name: "SID/SAI/KIM",
     url: "https://www.sebi.gov.in/filings/mutual-funds.html",
   },

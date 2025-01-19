@@ -30,23 +30,20 @@ const PopUp = ({close}) => {
 
   return (
     <div className="w-screen">
-      <div className="md:max-w-[50%] xl:max-w-[40%] mx-auto">
+      <div className="md:max-w-[50%] xl:max-w-[40%] w-[95%] mx-auto">
         <div
           className={`${
-            submitted ? "bg-transparent" : "bg-white"
-          } py-8 px-6 shadow rounded-lg`}
+            submitted ? "bg-transparent" : "bg-white py-8 px-6"
+          } shadow rounded-lg`}
         >
           <div className="flex items-center justify-between bg-white p-2 rounded-tl-md rounded-tr-md">
             <div className="text-center w-full">Contact Us</div>
-            <button 
-              className="ml-auto text-3xl"
-              onClick={close}
-            >
+            <button className="ml-auto text-3xl" onClick={close}>
               <FaWindowClose />
             </button>
           </div>
           {submitted ? (
-            <ThankYou />
+            <ThankYou close={close} />
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

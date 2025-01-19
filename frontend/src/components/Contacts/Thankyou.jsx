@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { scrollUp } from "../ScrollToTop/ScrollToTop";
-const ThankYou = () => {
+const ThankYou = (props) => {
   useEffect(()=>{scrollUp()});
   const navigate = useNavigate();
   return (
@@ -45,7 +45,7 @@ const ThankYou = () => {
         </motion.p>
 
         <motion.button
-          onClick={() => navigate("/")}
+          onClick={() =>{ if(props.close) props.close(); navigate("/");}}
           className="text-lg text-center p-2 bg-white text-primary my-8 rounded-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
