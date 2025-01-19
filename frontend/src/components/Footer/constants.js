@@ -4,10 +4,10 @@ const contact = {
 };
 
 const address = {
-  street: "",
+  street: "Aliganj",
   city: "Lucknow",
   state: "Uttar Pradesh",
-  zip: "",
+  zip: "226024",
 };
 
 const importantLinks = [
