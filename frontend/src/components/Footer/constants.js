@@ -1,13 +1,13 @@
 const contact = {
-  email: "info@email.com",
-  phone: "(+91) XXX XXX XXXX",
+  email: "prarambhcapital@gmail.com",
+  phone: "(+91) 8604885599",
 };
 
 const address = {
-  street: "1234 Main Street",
-  city: "City",
-  state: "State",
-  zip: "ZIP",
+  street: "",
+  city: "Lucknow",
+  state: "Uttar Pradesh",
+  zip: "",
 };
 
 const importantLinks = [

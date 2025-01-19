@@ -44,7 +44,7 @@ const Carousel = () => {
       className="my-20 z-0"
     >
       <h1 className="text-xl lg:text-3xl font-bold text-center text-white mb-10">
-        Associated with
+        Associated With
       </h1>
       <div className="relative w-[90%] rounded-xl max-w-[960px] h-28 mx-auto overflow-hidden bg-white shadow-lg">
         <div

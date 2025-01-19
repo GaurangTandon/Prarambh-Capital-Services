@@ -12,7 +12,7 @@ const ScrollToTop = () => {
   return (
     <div>
       <motion.div
-        initial={{ y: 50 }}
+        initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8}}
         onClick={scrollUp}

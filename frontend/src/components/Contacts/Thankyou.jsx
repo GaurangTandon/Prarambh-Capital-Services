@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { scrollUp } from "../ScrollToTop/ScrollToTop";
 const ThankYou = () => {
   useEffect(()=>{scrollUp()});
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-start h-full w-full bg-gradient-to-b from-blue-500 to-green-500 text-white rounded-bl-md rounded-br-md">
       {/* Animated Header */}
@@ -42,15 +44,15 @@ const ThankYou = () => {
           </span>
         </motion.p>
 
-        <motion.a
-          href="/"
+        <motion.button
+          onClick={() => navigate("/")}
           className="text-lg text-center p-2 bg-white text-primary my-8 rounded-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           Back to Home
-        </motion.a>
+        </motion.button>
       </div>
     </div>
   );
