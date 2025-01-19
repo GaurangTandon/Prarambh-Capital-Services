@@ -30,7 +30,7 @@ const PopUp = ({close}) => {
 
   return (
     <div className="w-screen">
-      <div className="md:max-w-[50%] xl:max-w-[40%] w-[95%] mx-auto">
+      <div className="md:max-w-[50%] xl:max-w-[40%] w-full mx-auto">
         <div
           className={`${
             submitted ? "bg-transparent" : "bg-white py-8 px-6"

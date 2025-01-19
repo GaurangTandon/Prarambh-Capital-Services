@@ -39,7 +39,7 @@ const Layout = () => {
       <Footer />
       {popUp && (
         <div className="fixed inset-0 w-screen h-screen bg-black bg-opacity-50 z-50">
-          <div className="rounded-lg p-6 shadow-lg min-h-screen flex justify-center items-center">
+          <div className="rounded-lg p-6 max-sm:p-2 shadow-lg min-h-screen flex justify-center items-center">
             <PopUp close={handleClosePopUp}/>
           </div>
         </div>
