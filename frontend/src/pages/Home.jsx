@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
+import Carousel from "../components/Home/Carousel";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -226,6 +227,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Carousel/>
       </div>
     </div>
   );
