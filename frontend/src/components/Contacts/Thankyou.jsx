@@ -8,7 +8,7 @@ const ThankYou = (props) => {
   return (
     <div className="flex flex-col justify-start h-full w-full bg-gradient-to-b from-blue-500 to-green-500 text-white rounded-bl-md rounded-br-md">
       {/* Animated Header */}
-      <div className="mx-auto p-5 rounded mt-36 flex flex-col items-center">
+      <div className="mx-auto p-5 rounded mt-36 max-sm:mt-16 flex flex-col items-center">
         <motion.h1
           className="text-4xl text-center font-bold mb-6 flex justify-center"
           initial={{ opacity: 0, y: -50 }}
