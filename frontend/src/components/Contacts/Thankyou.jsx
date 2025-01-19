@@ -4,9 +4,9 @@ import { scrollUp } from "../ScrollToTop/ScrollToTop";
 const ThankYou = () => {
   useEffect(()=>{scrollUp()});
   return (
-    <div className="flex flex-col justify-start h-screen bg-gradient-to-b from-blue-500 to-green-500 text-white">
+    <div className="flex flex-col justify-start min-h-screen bg-gradient-to-b from-blue-500 to-green-500 text-white">
       {/* Animated Header */}
-      <div className="mx-auto w-[95%] md:max-w-[50%] p-5 rounded mt-36">
+      <div className="mx-auto w-[95%] md:max-w-[50%] p-5 rounded mt-36 flex flex-col items-center">
         <motion.h1
           className="text-4xl text-center font-bold mb-6 flex justify-center"
           initial={{ opacity: 0, y: -50 }}
@@ -38,6 +38,16 @@ const ThankYou = () => {
           Thank you for your message.
           <br /> <span className="text-gray-200">We will get in touch with you shortly.</span>
         </motion.p>
+
+        <motion.a
+          href="/"
+          className="text-lg text-center p-2 bg-white text-primary mt-8 rounded-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Back to Home
+        </motion.a>
       </div>
     </div>
   );

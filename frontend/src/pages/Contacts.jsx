@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
-import ThankYou from "@/components/Contacts/Thankyou"
+import React, { useState } from "react";
+import ThankYou from "@/components/Contacts/Thankyou";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -10,7 +9,6 @@ const Contacts = () => {
     phoneNumber: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [captchaVerified, setCaptchaVerified] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,20 +18,13 @@ const Contacts = () => {
     }));
   };
 
-  const handleCaptchaChange = (value) => {
-    setCaptchaVerified(!!value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!captchaVerified) {
-      alert("Please verify the CAPTCHA.");
-      return;
-    }
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "", phoneNumber: "" });
-    setCaptchaVerified(false);
-    setTimeout(()=>{setSubmitted(false)},5000);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 15000);
   };
 
   if (submitted) {
@@ -68,7 +59,7 @@ const Contacts = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                   placeholder="Full Name"
                 />
               </div>
@@ -87,7 +78,7 @@ const Contacts = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                   placeholder="ex@example.com"
                 />
               </div>
@@ -100,13 +91,13 @@ const Contacts = () => {
                   Phone Number
                 </label>
                 <input
-                  type="number"
+                  type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                   placeholder="XXXXXXXXXX"
                 />
               </div>
@@ -125,27 +116,15 @@ const Contacts = () => {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-blue-500 resize-none"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-none"
                   placeholder="Your message here..."
-                />
-              </div>
-
-              <div className="w-full flex justify-center">
-                <ReCAPTCHA
-                  sitekey={`${import.meta.env.VITE_SITE_KEY}`}
-                  onChange={handleCaptchaChange}
                 />
               </div>
 
               <div>
                 <button
                   type="submit"
-                  disabled={!captchaVerified}
-                  className={`w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
-                    captchaVerified
-                      ? "bg-blue-600 hover:bg-blue-700"
-                      : "bg-gray-400 cursor-not-allowed"
-                  } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary`}
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                 >
                   Send Message
                 </button>

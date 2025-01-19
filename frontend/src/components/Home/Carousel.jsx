@@ -25,7 +25,7 @@ const Carousel = () => {
 
     const animate = () => {
       setScrollPosition((prevPosition) => {
-        const newPosition = prevPosition - 0.5;
+        const newPosition = prevPosition - 0.8;
         return newPosition <= -totalWidth / 2 ? 0 : newPosition;
       });
     };

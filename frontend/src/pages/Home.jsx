@@ -88,7 +88,7 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                {/* <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="bg-green-500 text-white rounded-full p-8 shadow-lg">
                     <div className="text-center">
                       <div className="text-4xl font-bold">15+</div>
@@ -99,7 +99,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div
