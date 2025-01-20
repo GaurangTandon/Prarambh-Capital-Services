@@ -13,13 +13,13 @@ const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/services" element={<Services />}></Route>
-        <Route path="/calculator" element={<Calculator />}></Route>
-        <Route path="/contacts" element={<Contacts />}></Route>
-        <Route path="/disclaimer" element={<Disclaimer />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+        <Route index element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/services" element={<Services />}/>
+        <Route path="/calculator" element={<Calculator />}/>
+        <Route path="/contacts" element={<Contacts />}/>
+        <Route path="/disclaimer" element={<Disclaimer />}/>
+        <Route path="*" element={<NotFound />}/>
       </Route>
     </Routes>
   );
