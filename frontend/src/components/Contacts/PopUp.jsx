@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import ThankYou from "./Thankyou";
-import { FaWindowClose } from "react-icons/fa";
 
-const PopUp = ({close}) => {
+import { FaWindowClose } from "react-icons/fa";
+import ThankYou from "./Thankyou";
+
+const url =
+  "https://script.google.com/macros/s/AKfycbwTbL9PjJ0uVQITuANjkkdhhNBQH2LD4XlEKFWV_SqR6dcubO-8UahLaIMn7vCg4VSQww/exec";
+
+const PopUp = ({ close }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,11 +22,28 @@ const PopUp = ({close}) => {
       [name]: value,
     }));
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: "", email: "", message: "", phoneNumber: "" });
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        redirect: "follow",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log(response.status);
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "", phoneNumber: "" });
+      } else {
+        console.log("Submission failed:", response.status);
+      }
+    } catch (err) {
+      console.log("Error:", err);
+    }
     setTimeout(() => {
       setSubmitted(false);
     }, 15000);
