@@ -4,6 +4,7 @@ import ContactForm from "../components/Contacts/ContactForm";
 
 const Contacts = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isFetching, setIsFetching] = useState(false);
   
   if (submitted) {
     return <ThankYou />;
@@ -22,7 +23,12 @@ const Contacts = () => {
 
         <div className="mt-8">
           <div className="bg-white py-8 px-6 shadow rounded-lg">
-            <ContactForm submitted={submitted} setSubmitted={setSubmitted}/>
+            <ContactForm
+              submitted={submitted}
+              setSubmitted={setSubmitted}
+              isFetching={isFetching}
+              setIsFetching={setIsFetching}
+            />
           </div>
         </div>
       </div>

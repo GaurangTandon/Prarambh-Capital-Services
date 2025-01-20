@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const url =
   "https://script.google.com/macros/s/AKfycbwTbL9PjJ0uVQITuANjkkdhhNBQH2LD4XlEKFWV_SqR6dcubO-8UahLaIMn7vCg4VSQww/exec";
 
-const ContactForm = ({ submitted, setSubmitted }) => {
+const ContactForm = ({ submitted, setSubmitted,isFetching,setIsFetching }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +20,7 @@ const ContactForm = ({ submitted, setSubmitted }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsFetching(true);
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -39,6 +40,9 @@ const ContactForm = ({ submitted, setSubmitted }) => {
       }
     } catch (err) {
       console.log("Error:", err);
+    }
+    finally{
+      setIsFetching(false);
     }
     setTimeout(() => {
       setSubmitted(false);
@@ -127,7 +131,7 @@ const ContactForm = ({ submitted, setSubmitted }) => {
           type="submit"
           className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
         >
-          Send Message
+          {isFetching?"Sending...":"Send Message"}
         </button>
       </div>
     </form>

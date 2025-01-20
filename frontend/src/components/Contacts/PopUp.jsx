@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 
 const PopUp = ({ close }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [isFetching, setIsFetching] = useState(false);
   return (
     <div className="w-screen">
       <div className="md:max-w-[50%] xl:max-w-[40%] w-full mx-auto">
@@ -23,7 +24,12 @@ const PopUp = ({ close }) => {
           {submitted ? (
             <ThankYou close={close} />
           ) : (
-            <ContactForm submitted={submitted} setSubmitted={setSubmitted}/>
+            <ContactForm
+              submitted={submitted}
+              setSubmitted={setSubmitted}
+              isFetching={isFetching}
+              setIsFetching={setIsFetching}
+            />
           )}
         </div>
       </div>
