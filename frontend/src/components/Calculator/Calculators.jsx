@@ -1,6 +1,7 @@
 import {
   faChartLine,
   faMoneyBillTrendUp,
+  faMoneyBillWave,
 } from "@fortawesome/free-solid-svg-icons";
 
 import LumpsumCalculator from "./LumpsumCalculator";
@@ -23,7 +24,7 @@ const calculators = [
   {
     id: "lumpsum",
     name: "Lumpsum Calculator",
-    icon: faMoneyBillTrendUp,
+    icon: faMoneyBillWave,
     component: LumpsumCalculator,
   },
 ];
