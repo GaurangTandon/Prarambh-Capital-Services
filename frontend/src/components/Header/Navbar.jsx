@@ -1,5 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
 
   const navLinks = [
     { title: "Home", path: "/" },
-    { title: "About", path: "/about" },
+    // { title: "About", path: "/about" },
     { title: "Services", path: "/services" },
     { title: "Calculator", path: "/calculator" },
     { title: "Contact", path: "/contacts" },
