@@ -25,21 +25,6 @@ export default function Footer() {
             src="/logo.png"
             alt="logo"
           />
-          {/* <div className="flex flex-wrap gap-2 text-sm xl:text-md">
-            <NavLink className="border-r-2 border-white pr-2" to="/">
-              मुख्य पृष्ठ
-            </NavLink>
-            <NavLink className="border-r-2 border-white pr-2" to="/guests">
-              अतिथि
-            </NavLink>
-            <NavLink className="border-r-2 border-white pr-2" to="/team">
-              सदस्य
-            </NavLink>
-            <NavLink to="/gallery">वीथिका</NavLink>
-          </div> */}
-          {/* <p className="footer-company-name text-sm text-center text-yellow-500">
-            Tooryanaad © 2024
-          </p> */}
         </motion.div>
 
         <motion.div

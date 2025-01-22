@@ -1,9 +1,9 @@
 
 const Disclaimer = () => {
   return (
-    <div className="min-h-[100vh] text-zinc-300">
-      <h1 className="p-10 text-center text-2xl">Disclaimer</h1>
-      <p className="mx-14 text-justify text-lg">
+    <div className="max-md:pt-3 flex-col justify-center min-h-screen text-zinc-300 container mx-auto mb-5">
+      <h1 className="sm:p-10 text-center text-2xl my-3">Disclaimer</h1>
+      <p className="sm:mx-14 text-justify text-lg">
         These are our terms and conditions for usage of the website, Prarambh
         Capital Services and the related services offered by Prarambh Capital
         Services (‘Related Services’ hereafter means Stock Market Trading /
