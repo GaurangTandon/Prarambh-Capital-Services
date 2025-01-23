@@ -78,11 +78,11 @@ const PrivacyPolicy = () => {
                 <FontAwesomeIcon icon={section.icon} className="mr-2 text-primary" />
                 {section.heading}
               </h3>
-              <p className="mb-3">{section.content}</p>
+              <p className="mb-3 text-justify">{section.content}</p>
               {section.list && (
                 <ul className="list-disc pl-5 space-y-1">
                   {section.list.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                    <li key={idx} className="text-justify">{item}</li>
                   ))}
                 </ul>
               )}

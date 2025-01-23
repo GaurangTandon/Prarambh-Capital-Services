@@ -48,7 +48,7 @@ const Disclaimer = () => {
           {disclaimerData.sections.map((section, index) => (
             <div key={index} className="mb-6">
               <h3 className="font-bold text-lg mb-2">{section.heading}</h3>
-              <p className="leading-relaxed">{section.content}</p>
+              <p className="leading-relaxed text-justify">{section.content}</p>
             </div>
           ))}
         </div>
