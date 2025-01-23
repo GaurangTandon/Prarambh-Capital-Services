@@ -91,16 +91,25 @@ export default function Footer() {
       >
         <div className="text-center">Copyright © 2025 All Rights Reserved.</div>
         <div className="flex flex-wrap justify-center">
-          {importantLinks.map((ele, index) => (
-            <a
-              key={index}
-              target="_blank"
-              href={`${ele.url}`}
-              className="text-sm text-gray-300 hover:text-white px-1 border-r-2 border-white"
-            >
-              {ele.name}
-            </a>
-          ))}
+          {importantLinks.map((ele, index) =>
+            index > 2 ? (
+              <a
+                key={index}
+                target="_blank"
+                href={`${ele.url}`}
+                className="text-sm text-gray-300 hover:text-white px-1 border-r-2 border-white"
+              >
+                {ele.name}
+              </a>
+            ) : (
+              <NavLink
+                to={`${ele.url}`}
+                className="text-sm text-gray-300 hover:text-white px-1 border-r-2 border-white"
+              >
+                {ele.name}
+              </NavLink>
+            )
+          )}
         </div>
       </motion.div>
     </footer>
