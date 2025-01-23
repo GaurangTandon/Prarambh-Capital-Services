@@ -8,6 +8,8 @@ import Home from "@/pages/Home";
 import Layout from "@/layout/Layout";
 // import NotFound from "@/pages/NotFound";
 import Services from "@/pages/Services";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import Disclosure from "../pages/Discloser";
 
 const Router = () => {
   return (
@@ -19,6 +21,8 @@ const Router = () => {
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/discloser" element={<Disclosure/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>

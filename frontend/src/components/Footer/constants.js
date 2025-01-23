@@ -17,7 +17,11 @@ const importantLinks = [
   },
   {
     name: "Privacy Policy",
-    url: "not-defined",
+    url: "/privacy",
+  },
+  {
+    name: "Discloser",
+    url: "/discloser",
   },
   {
     name: "SID/SAI/KIM",
