@@ -66,10 +66,10 @@ const privacyPolicyData = {
 const PrivacyPolicy = () => {
   return (
     <div className="container mx-auto px-4 py-24">
-      <div className="bg-white p-8 rounded-xl shadow-lg">
+      <div className="bg-white p-8 max-sm:p-4 rounded-xl shadow-lg">
         <SectionHeading icon={faShieldAlt} title={privacyPolicyData.title} />
 
-        <p className="mb-6 text-gray-700 leading-relaxed">{privacyPolicyData.intro}</p>
+        <p className="mb-6 text-gray-700 leading-relaxed text-justify">{privacyPolicyData.intro}</p>
 
         <div className="space-y-6 text-gray-700">
           {privacyPolicyData.sections.map((section, index) => (

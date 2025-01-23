@@ -15,7 +15,7 @@ const SectionHeading = ({ icon, title }) => (
 const Disclosure = () => {
   return (
     <div className="container mx-auto px-4 py-24">
-      <div className="bg-white p-8 rounded-xl shadow-lg">
+      <div className="bg-white p-8 max-sm:p-4 rounded-xl shadow-lg">
         <SectionHeading icon={faMoneyCheckAlt} title="Disclosure" />
 
         <div className="overflow-x-auto">
