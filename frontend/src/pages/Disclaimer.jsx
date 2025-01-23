@@ -42,7 +42,7 @@ const Disclaimer = () => {
       <div className="bg-white p-8 rounded-xl shadow-lg">
         <SectionHeading icon={faFileAlt} title={disclaimerData.title} />
 
-        <p className="mb-6 text-gray-700 leading-relaxed">{disclaimerData.intro}</p>
+        <p className="mb-6 text-gray-700 leading-relaxed text-justify">{disclaimerData.intro}</p>
 
         <div className="space-y-6 text-gray-700">
           {disclaimerData.sections.map((section, index) => (
