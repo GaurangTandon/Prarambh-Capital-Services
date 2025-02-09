@@ -133,7 +133,7 @@ const Home = () => {
                   journey to financial freedom starts here
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                {/* <div className="grid md:grid-cols-2 gap-8">
                   <div className="text-center">
                     <FaBullseye className="text-4xl text-green-500 mx-auto mb-4" />
                     <h4 className="text-xl font-bold mb-4">Our Mission</h4>
@@ -154,7 +154,7 @@ const Home = () => {
                       privilege; it should be a right.
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="text-center mt-8">
                   <NavLink
