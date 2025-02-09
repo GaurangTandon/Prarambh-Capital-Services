@@ -104,6 +104,7 @@ export default function Footer() {
             ) : (
               <NavLink
                 to={`${ele.url}`}
+                key={index}
                 className="text-sm text-gray-300 hover:text-white px-1 border-r-2 border-white"
               >
                 {ele.name}
