@@ -119,7 +119,6 @@ const ContactForm = ({ submitted, setSubmitted,isFetching,setIsFetching }) => {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          required
           rows="4"
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-none"
           placeholder="Your message here..."
