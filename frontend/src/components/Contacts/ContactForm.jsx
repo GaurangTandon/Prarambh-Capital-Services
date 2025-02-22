@@ -102,6 +102,7 @@ const ContactForm = ({ submitted, setSubmitted,isFetching,setIsFetching }) => {
           value={formData.phoneNumber}
           onChange={handleChange}
           required
+          pattern="^(?:\+91|0)?-?[1-9]{1}[0-9]{9}$"
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
           placeholder="XXXXXXXXXX"
         />
