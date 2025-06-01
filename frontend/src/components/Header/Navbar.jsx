@@ -12,6 +12,7 @@ const Navbar = () => {
     { title: "Services", path: "/services" },
     { title: "Calculator", path: "/calculator" },
     { title: "Contact", path: "/contacts" },
+    { title: "Login", path: "https://prarambhcapitalservices.themfbox.com/" },
   ];
 
   const handleSidebarClose = () => setIsSidebarOpen(false);
