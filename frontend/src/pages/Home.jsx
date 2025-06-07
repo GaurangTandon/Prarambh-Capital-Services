@@ -113,20 +113,27 @@ const Home = () => {
                     ABOUT US
                   </h3>
                   <h2 className="text-xl max-sm:text-lg font-bold text-white">
-                    Welcome to Prarambh capital Services
+                    Welcome to Prarambh Capital Services
                   </h2>
                   <h3 className="text-xl max-sm:text-lg text-white mb-2"></h3>
                 </div>
                 <p className="mb-8 text-lg text-justify leading-1 text-gray-300">
-                  Best Mutual Fund Distributor in Delhi NCR, India
-                  <br></br>
                   We are your dedicated financial advocates, committed to
                   transforming your financial future. We are here to make
                   financial security a reality for everyone, empowering you to
                   take control of your money.
+                  <br />
+                  With tailored advice and transparent communication, we
+                  simplify the complexities of finance. We believe in empowering
+                  you through knowledge, so you can make bold decisions with
+                  confidence. As your trusted partners, we tackle challenges
+                  head-on, turning them into opportunities for growth. Together,
+                  we will build a strong foundation for your financial success.
+                  Let’s unlock your potential and pursue your dreams. Your
+                  journey to financial freedom starts here
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                {/* <div className="grid md:grid-cols-2 gap-8">
                   <div className="text-center">
                     <FaBullseye className="text-4xl text-green-500 mx-auto mb-4" />
                     <h4 className="text-xl font-bold mb-4">Our Mission</h4>
@@ -143,11 +150,11 @@ const Home = () => {
                     <p className="text-justify">
                       Our vision is simple yet powerful, to ensure financial
                       freedom for all. We believe that everyone deserves a
-                      chance to thrive. Financial security shouldn't be a
+                      chance to thrive. Financial security shouldn’t be a
                       privilege; it should be a right.
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="text-center mt-8">
                   <NavLink
@@ -227,7 +234,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <Carousel/>
+        <Carousel />
       </div>
     </div>
   );

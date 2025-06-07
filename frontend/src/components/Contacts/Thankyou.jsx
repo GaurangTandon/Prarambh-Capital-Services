@@ -5,6 +5,10 @@ import { scrollUp } from "../ScrollToTop/ScrollToTop";
 const ThankYou = (props) => {
   useEffect(()=>{scrollUp()});
   const navigate = useNavigate();
+  const wrapUp=()=>{
+    if (props.close) props.close();
+    navigate("/");
+  }
   return (
     <div className="flex flex-col justify-start h-full w-full bg-gradient-to-b from-blue-500 to-green-500 text-white rounded-bl-md rounded-br-md">
       {/* Animated Header */}
@@ -45,7 +49,7 @@ const ThankYou = (props) => {
         </motion.p>
 
         <motion.button
-          onClick={() =>{ if(props.close) props.close(); navigate("/");}}
+          onClick={wrapUp}
           className="text-lg text-center p-2 bg-white text-primary my-8 rounded-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

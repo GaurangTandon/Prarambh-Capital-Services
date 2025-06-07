@@ -9,7 +9,7 @@ const WAicon = () => {
         transition={{ duration: 0.8 }}
         href="https://wa.me/918604885599"
         target="_blank"
-        className="fixed bottom-16 right-5 w-12 h-12 flex justify-center items-center rounded-2xl text-xl bg-transparent cursor-pointer"
+        className="fixed bottom-16 right-4 w-12 h-12 flex justify-center items-center rounded-2xl text-xl bg-transparent cursor-pointer"
       >
         <img src="/wa.png" alt="wa" />
       </motion.a>
