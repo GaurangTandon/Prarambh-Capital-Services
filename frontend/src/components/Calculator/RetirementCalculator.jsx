@@ -65,7 +65,7 @@ function RetirementCalculator() {
       totalSavings += monthSaving * 12;
       yearlyData.push({
         age: curAge + i,
-        savings: Math.round(totalSavings),
+        savings: Math.round(totalSavings / 100000), // in lakhs
       });
     }
 
@@ -234,7 +234,7 @@ function RetirementCalculator() {
       {chartData.length > 0 && (
         <div className="mt-8 p-4 border rounded shadow bg-white">
           <h2 className="text-xl font-semibold mb-4">Savings Growth Chart</h2>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={350}>
             <LineChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
@@ -242,17 +242,22 @@ function RetirementCalculator() {
                 label={{
                   value: "Age",
                   position: "insideBottomRight",
-                  offset: -5,
+                  offset: 0,
                 }}
               />
               <YAxis
                 label={{
-                  value: "Savings (₹)",
+                  value: "Savings (₹ Lakh)",
                   angle: -90,
                   position: "insideLeft",
+                  offset: 4,
                 }}
+                tickFormatter={(value) => `${value} L`}
               />
-              <Tooltip formatter={(value) => `₹${value.toLocaleString()}`} />
+              <Tooltip
+                formatter={(value) => `₹${value.toFixed(2)} Lakh`}
+                labelFormatter={(label) => `Age: ${label}`}
+              />
               <Line
                 type="monotone"
                 dataKey="savings"
