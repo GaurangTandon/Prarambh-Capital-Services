@@ -35,7 +35,17 @@ const Navbar = () => {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex space-x-8">
-              {navLinks.map((link) => (
+              {navLinks.map((link) => link.startsWith('http') ? (
+                <a
+                  key={link.title}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-100 hover:text-gray-300 md:rounded-md transition-colors px-1"
+                >
+                  {link.title}
+                </a>
+              ) : (
                 <NavLink
                   key={link.title}
                   to={link.path}
@@ -121,7 +131,17 @@ const Navbar = () => {
 
             {/* Sidebar Navigation Links */}
             <div className="py-4">
-              {navLinks.map((link) => (
+              {navLinks.map((link) => link.startsWith('http') ? (
+                <a
+                  key={link.title}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-gray-100 hover:bg-gray-300 hover:text-primary transition-colors text-center"
+                >
+                  {link.title}
+                </a>
+              ) : (
                 <NavLink
                   key={link.title}
                   to={link.path}
