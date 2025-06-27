@@ -35,7 +35,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex space-x-8">
-              {navLinks.map((link) => link.startsWith('http') ? (
+              {navLinks.map((link) => link.path.startsWith('http') ? (
                 <a
                   key={link.title}
                   href={link.path}
@@ -131,7 +131,7 @@ const Navbar = () => {
 
             {/* Sidebar Navigation Links */}
             <div className="py-4">
-              {navLinks.map((link) => link.startsWith('http') ? (
+              {navLinks.map((link) => link.path.startsWith('http') ? (
                 <a
                   key={link.title}
                   href={link.path}
