@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const SIPCalculator = () => {
   const [monthlyInv, setMonthlyInv] = useState("");
   const [rate, setRate] = useState("");
@@ -10,13 +11,19 @@ const SIPCalculator = () => {
     const annualRate = parseFloat(rate);
     const years = parseFloat(timePeriod);
 
+    if (isNaN(monthlyInvestment) || isNaN(annualRate) || isNaN(years)) {
+      alert("Please enter valid numbers in all fields.");
+      return;
+    }
+
     const monthlyRate = annualRate / 12 / 100;
     const months = years * 12;
     const totalInvestment = monthlyInvestment * months;
+
+    // ✅ Correct SIP Future Value Formula (end of month)
     const futureValue =
-      monthlyInvestment *
-      ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate) *
-      (1 + monthlyRate);
+      monthlyInvestment * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+
     const estimatedReturn = futureValue - totalInvestment;
 
     setResult({
@@ -37,6 +44,7 @@ const SIPCalculator = () => {
           value={monthlyInv}
           onChange={(e) => setMonthlyInv(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 5000"
         />
       </div>
       <div>
@@ -48,6 +56,7 @@ const SIPCalculator = () => {
           value={rate}
           onChange={(e) => setRate(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 12"
         />
       </div>
       <div>
@@ -59,6 +68,7 @@ const SIPCalculator = () => {
           value={timePeriod}
           onChange={(e) => setTimePeriod(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 10"
         />
       </div>
       <button
@@ -85,4 +95,5 @@ const SIPCalculator = () => {
     </div>
   );
 };
+
 export default SIPCalculator;

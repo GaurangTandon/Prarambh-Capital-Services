@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const SWPCalculator = () => {
   const [invAmount, setInvAmount] = useState("");
   const [returnRate, setReturnRate] = useState("");
@@ -12,23 +13,42 @@ const SWPCalculator = () => {
     const withdrawal = parseFloat(monthlyWithdrawal);
     const years = parseFloat(timePeriod);
 
+    // ✅ Validation
+    if (
+      isNaN(initialAmount) ||
+      isNaN(annualRate) ||
+      isNaN(withdrawal) ||
+      isNaN(years) ||
+      initialAmount <= 0 ||
+      annualRate < 0 ||
+      withdrawal <= 0 ||
+      years <= 0
+    ) {
+      alert("Please enter valid positive numbers for all fields.");
+      return;
+    }
+
     const monthlyRate = annualRate / 12 / 100;
     const months = years * 12;
     let balance = initialAmount;
     let totalWithdrawn = 0;
 
     for (let i = 0; i < months; i++) {
-      if (balance < withdrawal) {
+      if (balance <= 0) {
         setResult({
           finalBalance: 0,
-          totalWithdrawn: (totalWithdrawn + balance).toFixed(2),
+          totalWithdrawn: totalWithdrawn.toFixed(2),
           status: "SWP ended early as balance was exhausted.",
           ok: false,
         });
         return;
       }
-      balance = balance * (1 + monthlyRate) - withdrawal;
-      totalWithdrawn += withdrawal;
+
+      const actualWithdrawal = Math.min(withdrawal, balance);
+      balance -= actualWithdrawal;
+      totalWithdrawn += actualWithdrawal;
+
+      balance = balance * (1 + monthlyRate);
     }
 
     setResult({
@@ -50,6 +70,7 @@ const SWPCalculator = () => {
           value={invAmount}
           onChange={(e) => setInvAmount(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 500000"
         />
       </div>
       <div>
@@ -61,6 +82,7 @@ const SWPCalculator = () => {
           value={returnRate}
           onChange={(e) => setReturnRate(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 10"
         />
       </div>
       <div>
@@ -72,6 +94,7 @@ const SWPCalculator = () => {
           value={monthlyWithdrawal}
           onChange={(e) => setMonthlyWithdrawal(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 10000"
         />
       </div>
       <div>
@@ -83,14 +106,17 @@ const SWPCalculator = () => {
           value={timePeriod}
           onChange={(e) => setTimePeriod(e.target.value)}
           className="w-full p-2 border rounded"
+          placeholder="e.g. 10"
         />
       </div>
+
       <button
         onClick={calculate}
         className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
       >
         Calculate
       </button>
+
       {result && (
         <div className="mt-4 p-4 bg-gray-100 rounded space-y-2">
           <p className="text-md font-semibold">
@@ -112,4 +138,4 @@ const SWPCalculator = () => {
   );
 };
 
-export default SWPCalculator
+export default SWPCalculator;
