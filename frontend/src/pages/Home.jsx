@@ -113,7 +113,7 @@ const Home = () => {
                     ABOUT US
                   </h3>
                   <h2 className="text-xl max-sm:text-lg font-bold text-white">
-                    Welcome to Prarambh Capital Services
+                    Welcome to Aarnik Capital Services
                   </h2>
                   <h3 className="text-xl max-sm:text-lg text-white mb-2"></h3>
                 </div>

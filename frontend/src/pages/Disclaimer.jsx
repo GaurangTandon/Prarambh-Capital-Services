@@ -11,27 +11,27 @@ const SectionHeading = ({ icon, title }) => (
 
 const disclaimerData = {
   title: "Disclaimer",
-  intro: "These are our terms and conditions for usage of the website, Prarambh Capital Services, and the related services offered by Prarambh Capital Services. ('Related Services' hereafter means Stock Market Trading, Mutual Funds, ULIPs, Investment Analysis given through E-Mail, Messenger, Mobile Phone, Mobile SMS, Telephone, or in any other form, manner, or media).",
+  intro: "These are our terms and conditions for usage of the website, Aarnik Capital Services, and the related services offered by Aarnik Capital Services. ('Related Services' hereafter means Stock Market Trading, Mutual Funds, ULIPs, Investment Analysis given through E-Mail, Messenger, Mobile Phone, Mobile SMS, Telephone, or in any other form, manner, or media).",
   sections: [
     {
       heading: "Ownership and Consent",
-      content: "Prarambh Capital Services owns Prarambh Capital Services and all its contents & related services. You agree and understand that the information and material contained in this website and the related services offered by Prarambh Capital Services constitute your consent to the terms and conditions mentioned below. You also agree that Prarambh Capital Services can modify or alter the terms and conditions of the use of this service without any liability.",
+      content: "Aarnik Capital Services owns Aarnik Capital Services and all its contents & related services. You agree and understand that the information and material contained in this website and the related services offered by Aarnik Capital Services constitute your consent to the terms and conditions mentioned below. You also agree that Aarnik Capital Services can modify or alter the terms and conditions of the use of this service without any liability.",
     },
     {
       heading: "Content and Responsibility",
-      content:"The contents of this site & related services offered by Prarambh Capital Services are solely the personal views of the contributors. Prarambh Capital Services reserves the right to make modifications and alterations to the contents of this website. Users are advised to use the data for the purpose of information only and rely on their own judgment while making investment or trading decisions. The investments or trades discussed or recommended in this website & related services offered by Prarambh Capital Services may not be suitable for all investors.",
+      content:"The contents of this site & related services offered by Aarnik Capital Services are solely the personal views of the contributors. Aarnik Capital Services reserves the right to make modifications and alterations to the contents of this website. Users are advised to use the data for the purpose of information only and rely on their own judgment while making investment or trading decisions. The investments or trades discussed or recommended in this website & related services offered by Aarnik Capital Services may not be suitable for all investors.",
     },
     {
       heading: "Accuracy and Liability",
-      content: "Prarambh Capital Services does not warranty the timeliness, accuracy, or quality of the electronic content and takes no responsibility for any loss or profit arising out of decisions being made by anyone acting on the analysis published on this website.",
+      content: "Aarnik Capital Services does not warranty the timeliness, accuracy, or quality of the electronic content and takes no responsibility for any loss or profit arising out of decisions being made by anyone acting on the analysis published on this website.",
     },
     {
       heading: "Restrictions on Use",
-      content: "The contents of this website & the related services offered by Prarambh Capital Services cannot be copied, reproduced, republished, uploaded, posted, transmitted, or distributed for any non-personal use without obtaining prior permission from Prarambh Capital Services.",
+      content: "The contents of this website & the related services offered by Aarnik Capital Services cannot be copied, reproduced, republished, uploaded, posted, transmitted, or distributed for any non-personal use without obtaining prior permission from Aarnik Capital Services.",
     },
     {
       heading: "Linked Sites",
-      content: "Prarambh Capital Services is not responsible for the contents of any of the linked sites. By providing access to other websites, it is neither recommending nor endorsing the content available on the linked websites. If you do not agree to any of the terms mentioned in this agreement, you should kindly exit the site.",
+      content: "Aarnik Capital Services is not responsible for the contents of any of the linked sites. By providing access to other websites, it is neither recommending nor endorsing the content available on the linked websites. If you do not agree to any of the terms mentioned in this agreement, you should kindly exit the site.",
     },
   ],
 };

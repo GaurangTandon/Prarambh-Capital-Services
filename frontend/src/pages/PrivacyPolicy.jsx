@@ -17,7 +17,7 @@ const SectionHeading = ({ icon, title }) => (
 
 const privacyPolicyData = {
   title: "Privacy Policy",
-  intro: "This privacy policy sets out how Prarambh Capital Services uses and protects any information that you share when you use this website. Prarambh Capital Services is committed to ensuring that your privacy is protected at all times. This policy is effective from January 1, 2025.",
+  intro: "This privacy policy sets out how Aarnik Capital Services uses and protects any information that you share when you use this website. Aarnik Capital Services is committed to ensuring that your privacy is protected at all times. This policy is effective from January 1, 2025.",
   sections: [
     {
       heading: "Information Collection",

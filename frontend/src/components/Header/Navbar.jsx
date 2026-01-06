@@ -29,7 +29,7 @@ const Navbar = () => {
             {/* Website Name */}
             <div className="flex-shrink-0">
               <h1 className="text-lg max-sm:text-md font-semibold text-white">
-                Prarambh Capital Services
+                Aarnik Capital Services
               </h1>
             </div>
 
