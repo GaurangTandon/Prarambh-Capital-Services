@@ -1,5 +1,5 @@
 const contact = {
-  email: "prarambhcapital@gmail.com",
+  email: "aarnikcapital@gmail.com",
   phone: "(+91) 8604885599",
 };
 
