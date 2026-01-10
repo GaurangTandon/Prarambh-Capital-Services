@@ -89,7 +89,7 @@ export default function Footer() {
         viewport={{ once: false }}
         className="max-w-[1200px] text-sm w-full flex gap-2 max-md:flex-col justify-between items-center mx-auto"
       >
-        <div className="text-center">Copyright © 2025 All Rights Reserved.</div>
+        <div className="text-center">Copyright © 2026 All Rights Reserved.</div>
         <div className="flex flex-wrap justify-center">
           {importantLinks.map((ele, index) =>
             index > 2 ? (
