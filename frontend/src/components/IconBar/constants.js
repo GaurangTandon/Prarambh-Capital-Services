@@ -1,8 +1,8 @@
 const socialLinks = {
-  facebook: "https://www.facebook.com/prarambhcapital",
-  instagram: "https://www.instagram.com/prarambh_capital/",
-  youtube: "https://www.youtube.com/@Prarambh.Capital",
-  twitter: "https://x.com/PrarambhC",
-  linkedin: "https://www.linkedin.com/company/prarambh-capital",
+  facebook: "https://www.facebook.com/aarnikcapital",
+  instagram: "https://www.instagram.com/aarnik_capital/",
+  youtube: "https://www.youtube.com/@Aaarnik.Capital",
+  twitter: "https://x.com/AarnikC",
+  linkedin: "https://www.linkedin.com/company/aarnikcapital",
 };
 export {socialLinks}
