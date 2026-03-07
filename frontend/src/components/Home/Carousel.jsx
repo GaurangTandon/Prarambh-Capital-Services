@@ -15,6 +15,9 @@ const logos = [
   "/carousel/sbi.png",
   "/carousel/tata.png",
   "/carousel/whiteoak.png",
+  "/carousel/abakkus.jpeg",
+  "/carousel/dspmf_logo.png",
+  "/carousel/invesco.jpeg",
 ];
 
 const Carousel = () => {
