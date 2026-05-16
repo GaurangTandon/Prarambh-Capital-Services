@@ -79,10 +79,12 @@ export default function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
         viewport={{ once: false }}
-        className="max-w-[1200px] w-full text-center text-sm mx-auto"
+        className="max-w-[1200px] w-full text-center text-sm mx-auto px-4 mt-2"
       >
         <p>
-          Aarnik Capital Services LLP (ARN-348021) — AMFI registered Mutual Fund Distributor
+          <span className="block sm:inline">Aarnik Capital Services LLP (ARN-348021)</span>
+          <span className="hidden sm:inline"> — </span>
+          <span className="block sm:inline">AMFI registered Mutual Fund Distributor</span>
         </p>
       </motion.div>
       <motion.div
