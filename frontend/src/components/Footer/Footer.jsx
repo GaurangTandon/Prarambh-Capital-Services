@@ -85,6 +85,16 @@ export default function Footer() {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.45 }}
+        viewport={{ once: false }}
+        className="max-w-[1200px] w-full text-center text-sm mx-auto my-2"
+      >
+        <p>Aarnik Capital Services LLP (ARN-348021)</p>
+        <p>AMFI registered Mutual Fund Distributor</p>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false }}
         className="max-w-[1200px] text-sm w-full flex gap-2 max-md:flex-col justify-between items-center mx-auto"
