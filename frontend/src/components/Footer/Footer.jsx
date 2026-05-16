@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -80,10 +79,11 @@ export default function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
         viewport={{ once: false }}
-        className="max-w-[1200px] w-full text-center text-sm mx-auto mt-6"
+        className="max-w-[1200px] w-full text-center text-sm mx-auto"
       >
-        <p>Aarnik Capital Services LLP (ARN-348021)</p>
-        <p>AMFI registered Mutual Fund Distributor</p>
+        <p>
+          Aarnik Capital Services LLP (ARN-348021) — AMFI registered Mutual Fund Distributor
+        </p>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
