@@ -82,9 +82,8 @@ export default function Footer() {
         className="max-w-[1200px] w-full text-center text-sm mx-auto px-4 mt-2"
       >
         <p>
-          <span className="block sm:inline">Aarnik Capital Services LLP (ARN-348021)</span>
-          <span className="hidden sm:inline"> — </span>
-          <span className="block sm:inline">AMFI registered Mutual Fund Distributor</span>
+          <span className="block">Aarnik Capital Services LLP</span>
+          <span className="block">(AMFI Registered Mutual Fund Distributor - ARN-348021)</span>
         </p>
       </motion.div>
       <motion.div
